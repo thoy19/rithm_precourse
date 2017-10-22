@@ -1,0 +1,9 @@
+ h1 (tab)
+
+ div>p>section>h1{Nice!} (tab)
+
+ ul>{outside}>li*4 (tab)
+ 
+ p{sibling 1}+div{sibling 2}+parent>{parent}>div>{child}>div{grandchild} (tab)
+
+ 
