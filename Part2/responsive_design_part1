@@ -1,0 +1,8 @@
+1) em is a relative unit of measurement. compares to the font size for the element
+
+2) em is compared to font size of element, while rem is compared to size of the root
+
+3) mobile first design is the idea that we should create pages for mobile first, and then add logic to adjust for desktops
+
+4) Block Element Modifier and a methodology for writing cleaner CSS code
+

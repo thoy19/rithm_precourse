@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Design Part2</title>
+	<style>
+
+		.col-4, .col-6, .col-12 {
+    		height: 200px;
+		}
+
+		.col-4 {
+			width: 33%;
+			background-color: black;
+		}
+		
+		.col-6 {
+			width: 50%;
+			background-color: blue;
+		}
+
+		.col-12 {
+			width: 100%;
+			background-color: green;
+		}
+
+		@media (min-width: 765px) and (max-width: 960px) {
+			.col-4 {
+				width: 50%;
+			}
+		}
+
+		@media (max-width: 765px) {
+			.col-4 {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 960px) {
+			.col-6 {
+				width: 100%;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+		<div class="col-4"></div>
+		<div class="col-6"></div>
+		<div class="col-12"></div>
+</body>
+</html>
