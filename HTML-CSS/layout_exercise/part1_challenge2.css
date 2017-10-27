@@ -1,0 +1,19 @@
+ body {
+ 	background-color: lightblue;
+ }
+
+#poem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+p {
+	margin: 0;
+}
+
+#poem p::first-letter {
+	font-size: 20pt;
+}
