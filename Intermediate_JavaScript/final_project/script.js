@@ -27,8 +27,12 @@ for(var i = 0; i < buttons.length; i++) {
 
 
 function winner() {
-  if(row1.children[0].innerHTML == "o" && row1.children[1].innerHTML == "o" && row1.children[2].innerHTML == "o" || row2.children[0].innerHTML == "o" && row2.children[1].innerHTML == "o" && row2.children[2].innerHTML == "o" || row3.children[0].innerHTML == "o" && row3.children[1].innerHTML == "o" && row3.children[2].innerHTML == "o") {
-    alert("WINNER is O");
+  if(row1.children[0].innerHTML == "o" && row1.children[1].innerHTML == "o" && row1.children[2].innerHTML == "o" || row2.children[0].innerHTML == "o" && row2.children[1].innerHTML == "o" && row2.children[2].innerHTML == "o" || row3.children[0].innerHTML == "o" && row3.children[1].innerHTML == "o" && row3.children[2].innerHTML == "o" || row1.children[0].innerHTML == "x" && row1.children[1].innerHTML == "x" && row1.children[2].innerHTML == "x" || row2.children[0].innerHTML == "x" && row2.children[1].innerHTML == "x" && row2.children[2].innerHTML == "x" || row3.children[0].innerHTML == "x" && row3.children[1].innerHTML == "x" && row3.children[2].innerHTML == "x") {
+    alert("WINNER");
+  } else if (row1.children[0].innerHTML == "o" && row2.children[0].innerHTML == "o" && row3.children[0].innerHTML == "o" || row1.children[1].innerHTML == "o" && row2.children[1].innerHTML == "o" && row3.children[1].innerHTML == "o" || row1.children[2].innerHTML == "o" && row2.children[2].innerHTML == "o" && row3.children[2].innerHTML == "o" || row1.children[0].innerHTML == "x" && row2.children[0].innerHTML == "x" && row3.children[0].innerHTML == "x" || row1.children[1].innerHTML == "x" && row2.children[1].innerHTML == "x" && row3.children[1].innerHTML == "x" || row1.children[2].innerHTML == "x" && row2.children[2].innerHTML == "x" && row3.children[2].innerHTML == "x") {
+    alert("winner column");
+  } else if (row1.children[0].innerHTML == "o" && row2.children[1].innerHTML == "o" && row3.children[2].innerHTML == "o" || row1.children[2].innerHTML == "o" && row2.children[1].innerHTML == "o" && row3.children[0].innerHTML == "o" || row1.children[0].innerHTML == "x" && row2.children[1].innerHTML == "x" && row3.children[2].innerHTML == "x" || row1.children[2].innerHTML == "x" && row2.children[1].innerHTML == "x" && row3.children[0].innerHTML == "x") {
+    alert("Winner diag")
   }
 }
 
