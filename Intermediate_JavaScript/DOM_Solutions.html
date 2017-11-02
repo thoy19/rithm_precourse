@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+    <script>
+        var section = document.getElementById("container");
+        var secton2 = document.querySelector("#container");
+        var second = document.getElementsByClassName("second");
+        var third = document.getElementsByClassName("third")[1];
+        section.innerText = "Hello";
+        var footer = getElementsByClassName("footer");
+        var newLi = document.createElement("li");
+        newLi.innerText = "four";
+        var ul = document.getElementsByTag("ul");
+        ul.appendChild(newLi);
+        var ol = querySelectorAll("ol li");
+        for(var i = 0; i <ol.length; i++) {
+            ol[i].style.backgroundColor = "green";
+        }
+        var body = document.getElementsByTag("body");
+        body.removeChild(footer);
+
+    </script>
+
+</body>
+</html>
