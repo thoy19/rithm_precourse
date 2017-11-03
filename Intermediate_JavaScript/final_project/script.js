@@ -9,6 +9,8 @@ var row3 = document.getElementById("row3");
 var winnerBox = document.getElementById("result");
 var resetBtn = document.getElementById("reset");
 
+var moves = 0;
+
 for(var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function(event){
   
@@ -16,12 +18,16 @@ for(var i = 0; i < buttons.length; i++) {
     event.target.innerText = "x";
     event.target.disabled = "disabled";
     player += 1;
+    moves++;
     winner();
+    tieCheck();
   } else {
     event.target.innerHTML = "o";
     event.target.disabled = "disabled";
     player -= 1;
+    moves++;
     winner();
+    tieCheck();
     }
    })
 } 
@@ -34,11 +40,15 @@ function winner() {
     winnerBox.innerText = "We have a winner!";
   } else if (row1.children[0].innerHTML == "o" && row2.children[1].innerHTML == "o" && row3.children[2].innerHTML == "o" || row1.children[2].innerHTML == "o" && row2.children[1].innerHTML == "o" && row3.children[0].innerHTML == "o" || row1.children[0].innerHTML == "x" && row2.children[1].innerHTML == "x" && row3.children[2].innerHTML == "x" || row1.children[2].innerHTML == "x" && row2.children[1].innerHTML == "x" && row3.children[0].innerHTML == "x") {
     winnerBox.innerText = "We have a winner!";
-  }
+  } 
 }
 
 resetBtn.addEventListener("click", function() {
-  for (var k = 0; k < buttons.length; k++) {
-    buttons[k].innerHTML = '';
-  }
+  window.location.reload();
 })
+
+function tieCheck() {
+  if (moves === 9) {
+    winnerBox.innerText = "It's a tie!";
+  }
+}
