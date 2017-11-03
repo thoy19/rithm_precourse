@@ -1,0 +1,30 @@
+function vowelCount(str) {
+  var vowels = ['a','e','i','o','u'];
+  var arr = str.split('');
+  
+  return arr.reduce(function(acc,next) {
+    if(vowels.indexOf(next) > -1) {
+      if(acc[next] > 0) {
+        acc[next] += 1;
+      } else {
+          acc[next] = 1;
+        }
+    }
+  return acc;
+  },{});
+}
+vowelCount("awesome");
+
+
+function removeVowels(str) {
+  var vowels = ['a','e','i','o','u'];
+  var arr = str.split('');
+  
+  return arr.reduce(function(acc,next) {
+    if(vowels.indexOf(next) === -1) {
+      acc.push(next);
+    }
+    return acc;
+  },[]);
+}
+removeVowels("fun");

@@ -1,0 +1,94 @@
+          ***************************** forEach ***********************
+
+function listNames(array) {
+  array.forEach(function(song) {
+    console.log(song.name);
+  });
+}
+listNames(songs);
+
+function listSongDetails(array) {
+  array.forEach(function(song) {
+    console.log(song.name+',' + " by " + song.artist + " " + "(" + song.duration + ")");
+  });
+}
+listSongDetails(songs);
+
+
+function summerJamCount(array) {
+  var summer = [6,7,8];
+  var count = 0;
+  
+  array.forEach(function(song) {
+    if(summer.indexOf(song.month) > -1) {
+      count++;
+    }
+  });
+  
+  return count;
+}
+summerJamCount(songs);
+
+
+            ***************************** map ***********************
+
+function getDurations(array) {
+  return array.map(function(song) {
+    return song.duration;
+  });
+}
+getDurations(songs);
+
+
+function getDurationInSeconds(array) {
+  var minute = 0;
+  var second = 0;
+  
+  return array.map(function(song) {
+    return Number(song.duration[0]*60) + Number(song.duration[2] + song.duration[3]);
+  });
+}
+getDurationInSeconds(songs);
+
+
+function getMainArtists(array) {
+  var feature = [];
+  
+  return array.map(function(song) {
+     feature = song.artist.split(" ");
+     if (feature.indexOf('featuring') > -1) {
+       feature.splice(feature.indexOf('featuring'));
+       return feature.join(" ");
+     } else {
+         return feature.join(" ");
+     }
+  });
+}
+getMainArtists(songs);
+
+
+                ***************************** filter ***********************
+
+
+function getBigHits(array) {
+  return array.filter(function(song) {
+    return song.weeksAtNumberOne >=10;
+  });
+}
+getBigHits(songs);
+
+function getShortSongs(array) {
+  return array.filter(function(song) {
+    return song.duration.split("")[0] < 3;
+  });
+}
+getShortSongs(songs);
+
+
+function getSongByArtist(array,name) {
+  var artistlist = [];
+  return array.filter(function(song) {
+    return song.artist === name;
+  });
+}
+getSongByArtist(songs,"Taylor Swift");
