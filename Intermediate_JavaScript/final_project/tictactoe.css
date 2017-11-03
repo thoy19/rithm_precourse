@@ -3,17 +3,35 @@
 #box {
 	width: 330px;
 	height: 330px;
-	border: 2px solid black;
 	margin-left: 2px;
+	vertical-align: top;
 }
 
-button {
+
+.tic {
+	vertical-align: top;
+	padding: none;
+	margin-top: 2px;
+	display: inline-block;
 	width: 100px;
 	height: 100px;
-	border: none;
-	margin: none;
-	padding: none;
 	font-size: 30px;
 	font: black;
+	border: 2px solid black;
+	text-align: center;
 }
 
+
+#result {
+	height: 60px;
+	width: 305px;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 40px;
+}
+
+#reset {
+	height: 50px;
+	width: 310px;
+	font-size: 30px;
+}
