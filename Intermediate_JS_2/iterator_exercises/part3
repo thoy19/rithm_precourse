@@ -92,3 +92,52 @@ function getSongByArtist(array,name) {
   });
 }
 getSongByArtist(songs,"Taylor Swift");
+
+
+
+              ***************************** reduce ***********************
+
+function summerJamCountRefactor(array) {
+  var summer = [6,7,8];
+  return array.reduce(function(acc,next) {
+    if(summer.indexOf(next.month) > -1) {
+      acc++;
+    }
+    return acc;
+  },0);
+}
+summerJamCountRefactor(songs);
+
+
+function getTotalDurationInSeconds(array) {
+  return array.map(function(song) {
+    return Number(song.duration[0]*60) + Number(song.duration[2] + song.duration[3]);
+  }).reduce(function(acc,next) {
+    return acc + next;
+  },0);
+}
+getTotalDurationInSeconds(songs);
+
+
+function getSongCountByArtist(array) {
+  return array.reduce(function(acc,song) {
+    if(acc[song.artist]) {
+      acc[song.artist] += 1;
+    } else {
+      acc[song.artist] = 1;
+    }
+      return acc;
+  },{});
+}
+getSongCountByArtist(songs);
+
+
+function averageWeeksAtNumberOne(array) {
+  var songamt = array.length;
+  
+  return array.reduce(function(acc,song,index,array) {
+    return acc += song.weeksAtNumberOne/songamt;
+  },0);
+}
+averageWeeksAtNumberOne(songs);
+
