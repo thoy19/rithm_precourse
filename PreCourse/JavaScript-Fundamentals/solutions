@@ -1,0 +1,42 @@
+Part I
+
+1) true
+2) true
+3) 1
+4) true
+5) false
+6) true
+7) true
+
+
+Part2
+
+var isLearning = true;
+if(isLearning){
+    console.log("Keep it up!");
+} else {
+    console.log("Pretty sure you are learning....");
+}
+
+1) Keep it up!
+2) It works on its own because JavaScript coerces the value into being a boolean and be judged by truthy and falsey values. 
+
+
+var firstVariable;
+var secondVariable = "";
+var thirdVariable = 1;
+var secretMessage = "Shh!";
+
+if(firstVariable){
+    console.log("first");
+} else if(firstVariable || secondVariable){
+    console.log("second");
+} else if(firstVariable || thirdVariable){
+    console.log("third");
+} else {
+    console.log("fourth");
+}
+
+1) third - because the first two values are not truthy values
+2) null
+3) No, because 
